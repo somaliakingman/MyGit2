@@ -1,0 +1,18 @@
+<p>
+  catalog works!
+</p>
+<div>
+  <label>amount</label>
+  <input type="text" [(ngModel)]="amount">
+</div>
+<div>
+  <label>msisdn</label>
+  <input type="text" [(ngModel)]="msisdn">
+</div>
+<button (click)="addtopup(amount,msisdn)">add</button>
+<ul>
+  <li *ngFor="let item of topuparray">{{item._id}} | {{item.msisdn}} | {{item.amount}}
+    <span *ngIf="item.msisd">,{{item.msisd}}</span>
+
+  </li>
+</ul>
